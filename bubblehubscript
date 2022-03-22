@@ -1,0 +1,17 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("bubblehub discord.gg/r2GtWavfUb", "Ocean")
+
+local HomeTab = Window:NewTab("Home")
+local Section = HomeTab:NewSection("Made by masterfusion23")
+local Section = HomeTab:NewSection("For mortem metallum")
+
+local MainTab = Window:NewTab("Main")
+local MainSection = MainTab:NewSection("Main")
+MainSection:NewButton("Inf Jump (DONT SPAM JUMP)", "dont spam or you will die", function()
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
